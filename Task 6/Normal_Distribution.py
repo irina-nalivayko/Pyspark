@@ -12,6 +12,7 @@ SIZE = 1000
 def generate_normal_distribution():
     global SIZE
     
+    # define partitions
     partitions = []    
     for i in range ( MEAN * 2 + 1 ):
         partitions.append(i)
