@@ -10,7 +10,7 @@ TOP_NUMBER = '5'
 def read_data_from_csv():    
     
     ts1 = datetime.datetime.now().timestamp()
-    df_calls = spark.read.load("D:/calls.csv", format="csv", sep=",", inferSchema="true", header="true")
+    df_calls = spark.read.load("sources/calls.csv", format="csv", sep=",", inferSchema="true", header="true")
     ts2 = datetime.datetime.now().timestamp()
     
     print ('It takes ' + str(round(ts2 - ts1, 3)) + ' seconds to read data from csv' )
@@ -19,7 +19,7 @@ def read_data_from_csv():
 def read_data_from_parquet():    
     
     ts1 = datetime.datetime.now().timestamp()
-    df_calls = spark.read.load("D:/calls.parquet")
+    df_calls = spark.read.load("sources/calls.parquet")
     ts2 = datetime.datetime.now().timestamp()
     
     print ('It takes ' + str(round(ts2 - ts1, 3)) + ' seconds to read data from parquet' )
