@@ -49,7 +49,7 @@ def calculate_theoretical_frequencies():
         x = i + 0.5
         t = ( x - MEAN ) / DEVIATION
         fi = math.exp ( - math.pow (t,2) / 2) / math.sqrt(2 * math.pi)
-        n = round (SIZE * fi / DEVIATION / 1000,3)
+        n = round ( fi / DEVIATION, 3)
         expected.append (n)
     
     print (expected)
